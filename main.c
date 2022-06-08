@@ -3,7 +3,7 @@
 int main()
 {
     const uint scale = 64;
-    Direction
+    Direction facing = DIR_R;
     Length window = {800, 600};
     setWindowLen(window);
     init();
@@ -14,7 +14,7 @@ int main()
     while(true){
         Ticks t = frameStart();
 
-        pos.x = pos.x+1;
+        pos = coordShift(pos, facing, 1);
         fillSquareCoord(pos, scale);
 
         frameEnd(t);
