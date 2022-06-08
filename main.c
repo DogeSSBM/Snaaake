@@ -3,40 +3,20 @@
 int main()
 {
     const uint scale = 64;
-    Direction facing = DIR_R;
     Length window = {800, 600};
     setWindowLen(window);
     init();
 
     setColor(PINK);
     Coord pos = coordOffset(getWindowMid(), coordDiv(iC(scale,scale), -2));
-
-    int a[5000] = {0};
-
-    a[69] = 69;
-
-    for(int i = 5000-1; i >= 0; i--){
-        printf("a[%i] = %i\n", i, a[i]);
-    }
+    Direction facing = DIR_R;
+    Direction dirkey[4] = {SDL_SCANCODE_UP, SDL_SCANCODE_RIGHT, SDL_SCANCODE_DOWN, SDL_SCANCODE_LEFT};
 
     while(true){
         Ticks t = frameStart();
 
-        if(keyPressed(SDL_SCANCODE_UP)){
-            facing = DIR_U;
-        }
-
-        if(keyPressed(SDL_SCANCODE_RIGHT)){
-            facing = DIR_R;
-        }
-
-        if(keyPressed(SDL_SCANCODE_DOWN)){
-            facing = DIR_D;
-        }
-
-        if(keyPressed(SDL_SCANCODE_LEFT)){
-            facing = DIR_L;
-        }
+        for(uint i = 0; i < 4; i++)
+            facing = keyPressed(dirkey[i]) ? i : facing;
 
         pos = coordShift(pos, facing, 1);
         fillSquareCoord(pos, scale);
