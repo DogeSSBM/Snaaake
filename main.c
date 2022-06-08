@@ -7,7 +7,7 @@ int main()
     setWindowLen(window);
 
     setColor(PINK);
-    Coord pos = getWindowMid();
+    Coord pos = coordOffset(getWindowMid(), iC(-64,-64));
 
     while(true){
         Ticks t = frameStart();
