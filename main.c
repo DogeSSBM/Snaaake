@@ -12,6 +12,7 @@ int main()
     while(true){
         Ticks t = frameStart();
 
+        pos.x = pos.x+1;
         fillSquareCoord(pos, 128);
 
         frameEnd(t);
