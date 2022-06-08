@@ -11,6 +11,14 @@ int main()
     setColor(PINK);
     Coord pos = coordOffset(getWindowMid(), coordDiv(iC(scale,scale), -2));
 
+    int a[5000] = {0};
+
+    a[69] = 69;
+
+    for(int i = 5000-1; i >= 0; i--){
+        printf("a[%i] = %i\n", i, a[i]);
+    }
+
     while(true){
         Ticks t = frameStart();
 

@@ -22,10 +22,10 @@ CoordPair	Types.h	/^}CoordPair, RangePair, LengthPair, OffsetPair;$/;"	t	typeref
 Coordf	Types.h	/^}Coordf, Vectorf, Rangef, Lengthf, Offsetf;$/;"	t	typeref:union:__anon13
 DEFAULT_WINDOW_XLEN	Graphics.h	2;"	d
 DEFAULT_WINDOW_YLEN	Graphics.h	3;"	d
-DIR_D	Types.h	/^	DIR_D = 0b10,$/;"	e	enum:__anon15
-DIR_L	Types.h	/^	DIR_L = 0b11$/;"	e	enum:__anon15
-DIR_R	Types.h	/^	DIR_R = 0b01,$/;"	e	enum:__anon15
-DIR_U	Types.h	/^	DIR_U = 0b00,$/;"	e	enum:__anon15
+DIR_D	Types.h	/^	DIR_D = 2,$/;"	e	enum:__anon15
+DIR_L	Types.h	/^	DIR_L = 3$/;"	e	enum:__anon15
+DIR_R	Types.h	/^	DIR_R = 1,$/;"	e	enum:__anon15
+DIR_U	Types.h	/^	DIR_U = 0,$/;"	e	enum:__anon15
 Direction	Types.h	/^}Direction;$/;"	t	typeref:enum:__anon15
 DirectionChar	Types.h	/^const char DirectionChar[4] = {'U', 'R', 'D', 'L'};$/;"	v
 E_DEFAULT	Menu.h	/^typedef enum{E_DEFAULT, E_HIGHLIGHT, E_DISABLED}LabelType;$/;"	e	enum:__anon21

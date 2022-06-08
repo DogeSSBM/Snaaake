@@ -124,10 +124,10 @@ typedef union{
 }Coordf, Vectorf, Rangef, Lengthf, Offsetf;
 
 typedef enum{
-	DIR_U = 0b00,
-	DIR_R = 0b01,
-	DIR_D = 0b10,
-	DIR_L = 0b11
+	DIR_U = 0,
+	DIR_R = 1,
+	DIR_D = 2,
+	DIR_L = 3
 }Direction;
 
 const char DirectionChar[4] = {'U', 'R', 'D', 'L'};
