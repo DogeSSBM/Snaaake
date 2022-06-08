@@ -3,12 +3,13 @@
 int main()
 {
     const uint scale = 64;
+    Direction
     Length window = {800, 600};
-    init();
     setWindowLen(window);
+    init();
 
     setColor(PINK);
-    Coord pos = coordOffset(getWindowMid(), iC(-scale/2,-scale/2));
+    Coord pos = coordOffset(getWindowMid(), coordDiv(iC(scale,scale), -2));
 
     while(true){
         Ticks t = frameStart();
